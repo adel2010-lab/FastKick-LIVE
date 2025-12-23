@@ -2,56 +2,67 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
   <title>FastKick LIVE | بث مباشر مباريات اليوم</title>
-  <meta name="description" content="FastKick LIVE – شاهد البث المباشر لمباريات اليوم بجودة عالية بدون تقطيع، متوافق مع جميع الأجهزة.">
+
+  <!-- SEO & Schema.org -->
+  <meta name="description" content="FastKick LIVE – شاهد البث المباشر لمباريات اليوم بجودة عالية على الموبايل.">
   <meta name="keywords" content="بث مباشر, مباريات اليوم, live football, football streaming, sports live, FastKick LIVE">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://adel2010-lab.github.io/fast-kick-live/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="FastKick LIVE | بث مباشر مباريات اليوم">
-  <meta property="og:description" content="شاهد البث المباشر لمباريات اليوم بجودة عالية وبدون تقطيع">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://adel2010-lab.github.io/fast-kick-live/">
-  <meta property="og:image" content="https://adel2010-lab.github.io/fast-kick-live/cover.png">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FastKick LIVE">
-  <meta name="twitter:description" content="بث مباشر مباريات اليوم بجودة عالية">
-  <meta name="twitter:image" content="https://adel2010-lab.github.io/fast-kick-live/cover.png">
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
   
-  <link rel="amphtml" href="https://adel2010-lab.github.io/fast-kick-live/amp.html">
+  <!-- Schema.org for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "SportsEvent",
+    "name": "Live Match - Team A vs Team B",
+    "startDate": "2025-12-25T20:00:00+00:00",
+    "endDate": "2025-12-25T22:00:00+00:00",
+    "location": {
+      "@type": "Place",
+      "name": "Stadium XYZ",
+      "address": "123 Sports St, City, Country"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://adel2010-lab.github.io/fast-kick-live/",
+      "priceCurrency": "USD",
+      "price": "0.00",
+      "eligibleRegion": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    },
+    "video": {
+      "@type": "VideoObject",
+      "name": "Live Stream of Match",
+      "contentUrl": "https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg",
+      "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg"
+    },
+    "identifier": "13179073164"
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZDHFHPHPF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DZDHFHPHPF');  // تم استبدال معرّف القياس
+  </script>
+
   <style>
     *{box-sizing:border-box;font-family:'Cairo',sans-serif}
     body{margin:0;background:#0b0e13;color:#fff}
-
-    header{padding:14px;text-align:center;background:#05070a;border-bottom:1px solid #1a1f2b}
-    header h1{margin:0;font-size:18px;font-weight:800}
-
+    header{padding:14px;text-align:center;background:#05070a}
+    h1{font-size:18px;margin:0;font-weight:800}
     .container{max-width:900px;margin:auto;padding:10px}
-
     .video-card{background:#11151c;border-radius:14px;overflow:hidden}
     .video-wrapper{position:relative;padding-top:56.25%}
     .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
     footer{text-align:center;padding:12px;font-size:12px;color:#9aa4b2}
-
-    /* Ads */
-    .ad-desktop,.ad-mobile{display:none;justify-content:center;margin:10px 0}
-
-    @media (min-width:769px){.ad-desktop{display:flex}}
-    @media (max-width:768px){.ad-mobile{display:flex}}
   </style>
 </head>
 
@@ -63,45 +74,19 @@
 
 <main class="container">
 
-  <!-- Desktop Ad -->
-  <div class="ad-desktop">
-    <script>
-      atOptions = {
-        'key' : 'c5f96200035d6c459ad5f9d3ab23c036',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/c5f96200035d6c459ad5f9d3ab23c036/invoke.js" defer></script>
-  </div>
-
-  <!-- Mobile Ad -->
-  <div class="ad-mobile">
-    <script>
-      atOptions = {
-        'key' : '89a6ac49b5e979ab8f9b7875bc6e12ad',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/89a6ac49b5e979ab8f9b7875bc6e12ad/invoke.js" defer></script>
-  </div>
-
   <!-- Video -->
   <div class="video-card">
     <div class="video-wrapper">
-      <iframe
-        loading="lazy"
-        src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg&autoplay=1&mute=1"
+      <iframe 
+        src="https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg&autoplay=1&mute=1&modestbranding=1&rel=0"
         allow="autoplay; encrypted-media; fullscreen"
         allowfullscreen>
       </iframe>
     </div>
   </div>
+
+  <!-- Visitor Count -->
+  <p>عدد الزوار: <span id="visitorCount">0</span></p>
 
 </main>
 
@@ -109,8 +94,21 @@
   © 2025 FastKick LIVE
 </footer>
 
-<!-- Social Bar -->
-<script src="https://pl28314761.effectivegatecpm.com/ff/d4/94/ffd494d6dac4a5b95b4555fd33954f66.js" defer></script>
+<script>
+  // عداد الزوار
+  let visits = localStorage.getItem('visits') || 0;
+  visits++;
+  localStorage.setItem('visits', visits);
+  document.getElementById('visitorCount').textContent = visits;
+
+  // منع النقر الأيمن على الفيديو
+  document.addEventListener('contextmenu', function(e) {
+    if(e.target.tagName === 'VIDEO') {
+      e.preventDefault();
+      alert('نسخ الفيديو محظور!');
+    }
+  });
+</script>
 
 </body>
 </html>
