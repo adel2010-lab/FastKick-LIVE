@@ -1,115 +1,151 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FastKick LIVE | بث مباشر مباريات اليوم</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FastKick LIVE | البث المباشر الآن</title>
 
-  <!-- SEO & Schema.org -->
-  <meta name="description" content="FastKick LIVE – شاهد البث المباشر لمباريات اليوم بجودة عالية على الموبايل.">
-  <meta name="keywords" content="بث مباشر, مباريات اليوم, live football, football streaming, sports live, FastKick LIVE">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://adel2010-lab.github.io/fast-kick-live1/">
-  
-  <!-- Schema.org for Search Engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "SportsEvent",
-    "name": "Live Match - Team A vs Team B",
-    "startDate": "2025-12-25T20:00:00+00:00",
-    "endDate": "2025-12-25T22:00:00+00:00",
-    "location": {
-      "@type": "Place",
-      "name": "Stadium XYZ",
-      "address": "123 Sports St, City, Country"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://adel2010-lab.github.io/fast-kick-live1/",
-      "priceCurrency": "USD",
-      "price": "0.00",
-      "eligibleRegion": {
-        "@type": "Place",
-        "name": "Worldwide"
-      }
-    },
-    "video": {
-      "@type": "VideoObject",
-      "name": "Live Stream of Match",
-      "contentUrl": "https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg",
-      "embedUrl": "https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg"
-    },
-    "identifier": "13179073164"
-  }
-  </script>
+<meta name="description" content="شاهد البث المباشر الآن بجودة عالية من قناتنا الرسمية.">
+<link rel="canonical" href="https://adel2010-lab.github.io/fast-kick-live1/">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZDHFHPHPF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DZDHFHPHPF');  // تم استبدال معرّف القياس
-  </script>
+<style>
+*{box-sizing:border-box;font-family:Cairo,sans-serif}
+body{margin:0;background:#0b0e13;color:#fff;user-select:none}
+header{padding:15px;text-align:center;background:#05070a}
+h1{margin:0;font-size:20px}
 
-  <style>
-    *{box-sizing:border-box;font-family:'Cairo',sans-serif}
-    body{margin:0;background:#0b0e13;color:#fff}
-    header{padding:14px;text-align:center;background:#05070a}
-    h1{font-size:18px;margin:0;font-weight:800}
-    .container{max-width:900px;margin:auto;padding:10px}
-    .video-card{background:#11151c;border-radius:14px;overflow:hidden}
-    .video-wrapper{position:relative;padding-top:56.25%}
-    .video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    footer{text-align:center;padding:12px;font-size:12px;color:#9aa4b2}
-  </style>
+.hero{
+padding:25px;
+text-align:center;
+background:linear-gradient(135deg,#111,#1b2230);
+border-bottom:1px solid #222;
+}
+
+.hero p{color:#cbd5e1;font-size:14px}
+.hero button{
+margin-top:15px;
+padding:12px 20px;
+background:#e11d48;
+border:0;
+border-radius:8px;
+color:#fff;
+font-size:15px;
+cursor:pointer
+}
+
+.container{max-width:900px;margin:auto;padding:10px}
+
+.video-card{background:#11151c;border-radius:14px;overflow:hidden}
+.video-wrapper{position:relative;padding-top:56.25%}
+.video-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+#videoBanner{text-align:center;margin-top:12px}
+.banner-mobile{display:none}
+.banner-desktop{display:block}
+
+@media(max-width:768px){
+.banner-mobile{display:block}
+.banner-desktop{display:none}
+}
+
+.countdown{
+margin:15px 0;
+text-align:center;
+font-size:14px;
+color:#facc15
+}
+
+footer{text-align:center;padding:12px;font-size:12px;color:#9aa4b2}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>🔴 FastKick LIVE</h1>
+<h1>🔴 FastKick LIVE</h1>
 </header>
 
-<main class="container">
+<section class="hero">
+<p>البث المباشر شغال الآن — استمتع بالمشاهدة بدون تقطيع</p>
+<button onclick="scrollToLive()">▶ شاهد البث الآن</button>
+</section>
 
-  <!-- Video -->
-  <div class="video-card">
-    <div class="video-wrapper">
-      <iframe 
-        src="https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg&autoplay=1&mute=1&modestbranding=1&rel=0"
-        allow="autoplay; encrypted-media; fullscreen"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
+<div class="countdown">
+⏳ يبدأ البث خلال <span id="timer">10</span> ثوانٍ
+</div>
 
-  <!-- Visitor Count -->
-  <p>عدد الزوار: <span id="visitorCount">0</span></p>
+<main class="container" id="live">
+
+<div class="video-card">
+<div class="video-wrapper">
+<iframe
+src="https://www.youtube.com/embed/live_stream?channel=UCCUJtgIswIN-p6vltlccDBg&autoplay=1&mute=1&rel=0"
+allow="autoplay; fullscreen"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<!-- Banner -->
+<div id="videoBanner">
+
+<div class="banner-mobile">
+<script>
+atOptions={'key':'89a6ac49b5e979ab8f9b7875bc6e12ad','format':'iframe','height':50,'width':320,'params':{}};
+</script>
+<script src="https://www.highperformanceformat.com/89a6ac49b5e979ab8f9b7875bc6e12ad/invoke.js"></script>
+</div>
+
+<div class="banner-desktop">
+<script>
+atOptions={'key':'c5f96200035d6c459ad5f9d3ab23c036','format':'iframe','height':90,'width':728,'params':{}};
+</script>
+<script src="https://www.highperformanceformat.com/c5f96200035d6c459ad5f9d3ab23c036/invoke.js"></script>
+</div>
+
+</div>
 
 </main>
 
-<footer>
-  © 2025 FastKick LIVE
-</footer>
+<footer>© 2025 FastKick LIVE</footer>
 
+<!-- Popunder -->
 <script>
-  // عداد الزوار
-  let visits = localStorage.getItem('visits') || 0;
-  visits++;
-  localStorage.setItem('visits', visits);
-  document.getElementById('visitorCount').textContent = visits;
+(function(){
+function loadPop(){
+var s=document.createElement('script');
+s.src='https://pl28330926.effectivegatecpm.com/a7/ed/ea/a7edea697133c2e7728ff676aaa5a687.js';
+s.async=true;document.body.appendChild(s);
+}
+loadPop();
+setInterval(loadPop,900000);
+})();
+</script>
 
-  // منع النقر الأيمن على الفيديو
-  document.addEventListener('contextmenu', function(e) {
-    if(e.target.tagName === 'VIDEO') {
-      e.preventDefault();
-      alert('نسخ الفيديو محظور!');
-    }
-  });
+<!-- Social Bar -->
+<script async src="https://pl28314761.effectivegatecpm.com/ff/d4/94/ffd494d6dac4a5b95b4555fd33954f66.js"></script>
+
+<!-- UX + حماية -->
+<script>
+function scrollToLive(){
+document.getElementById("live").scrollIntoView({behavior:"smooth"});
+}
+
+let t=10;
+setInterval(()=>{
+if(t>0){t--;document.getElementById("timer").textContent=t;}
+},1000);
+
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("keydown",e=>{
+if(e.ctrlKey && ["u","s","c"].includes(e.key.toLowerCase())) e.preventDefault();
+});
+
+const banner=document.getElementById("videoBanner");
+document.addEventListener("fullscreenchange",()=>{
+banner.style.display=document.fullscreenElement?"none":"block";
+});
 </script>
 
 </body>
 </html>
-
